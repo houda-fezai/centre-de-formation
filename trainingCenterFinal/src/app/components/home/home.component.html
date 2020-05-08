@@ -1,0 +1,61 @@
+
+<div class="global">
+
+    <div class="container pb-5">
+       <div  class="row  justify-content-center mb-5" >
+           <h1 class="mt-5 mb-5 justify-content-center">DEVENEZ DÉVELOPPEUR WEB À DISTANCE</h1>
+
+       </div>
+        <div class="row  justify-content-center">
+           <div class="col-9 mt-5 mb-5">
+               
+               
+              <p class="mt-5 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Odio ipsum illum accusantium nobis in commodi consectetur sapiente, 
+                      deserunt expedita sed aliquam atque? Magni a minima dolore, consequuntur eligendi et ducimus.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quae sunt nesciunt porro velit non cumque corrupti optio reprehenderit 
+                    distinctio exercitationem voluptatibus aliquam maxime, obcaecati cum sed eum?
+                    Voluptatibus, quod facere.
+               </p>
+
+           </div>
+             
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="mt-5 mb-5">
+                <img src="assets/img/pic2.jpg" class="rounded-circle ml-5" alt="pic2" width="25%" height="90%"/>
+           <img src="assets/img/pic1.jpg" class="rounded-circle ml-5 mr-5" alt="pic1" width="25%" height="90%" />
+               
+               <img src="assets/img/pic4.jpg" class="rounded-circle ml-5" alt="pic3" width="25%" height="90%"/>
+            </div>
+
+     
+        </div>
+
+        
+         
+        <div class="row justify-content-center">
+         <div class="col-6">
+      <input type="text" class="form-control" placeholder="commentaire" [(ngModel)]="message">
+        </div>
+    <button type="button" class="btn btn-outline-light" (click)="sendMessage()" >Valider</button>
+   
+    </div>
+    
+
+    
+<p class=" offset-1 col-6 msgs mt-3 " *ngFor = "let message of socketService.messages">
+      {{message}}
+      </p>
+
+
+
+
+       
+    </div>
+
+ 
+
+
+</div>

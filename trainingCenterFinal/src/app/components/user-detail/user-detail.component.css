@@ -1,0 +1,17 @@
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+
+}
+div.nav {
+
+    border: 1px solid grey;
+    background-color: #212529;
+    color: blanchedalmond;
+    height: 1000px;
+   
+}
+ul > li {
+
+    margin-top: 20px;
+}

@@ -1,0 +1,46 @@
+<div class="container">
+      <div class="row">
+       <div class="offset-3 col-md-6 p-5" style="border:1px solid snow">
+  <h4> <img class="rounded-circle " src="{{imgCourse}} " width="50" height="50">  {{ course.title }} </h4> <br><br>
+      
+        <p> description {{ course.description }} </p>
+    
+
+<form (ngSubmit)="editSt(f)" #f=ngForm>
+     <div class="form-group">
+           
+            <input type="hidden" class="form-control" id="nom" name="name" ngModel>
+        </div>
+        <div class="form-group">
+           
+            <input type="hidden" class="form-control" id="nom" name="lastname" ngModel>
+        </div>
+        <div class="form-group">
+          
+            <input type="hidden" class="form-control" id="email" name="email" ngModel>
+        </div>
+        <div class="form-group">
+            
+            <input type="hidden" class="form-control" id="password" name="password" ngModel>
+        </div>
+         <div class="form-group">
+           
+         
+            <input type="hidden"  name="title"  [(ngModel)]="course.title" ngModel />
+             <input type="hidden"  name="description" [(ngModel)]="course.description"  ngModel />
+        </div>
+        <button type="submit" class="btn btn-success btn-sm mr-3">inscription</button>
+      
+
+</form>
+<button type="button" class="btn btn-primary btn-sm" routerLink="/courses" style="float: left;margin-top: -30px; margin-left: 120px;"> retour </button>
+
+</div>
+</div>
+
+</div>
+<!-----
+<input type="hidden" id="exchageRateDate" name="title"  value="{{ course.title }}"  />
+ <input type="hidden" id="exchageRateDate" name="description"  value="{{ course.description }}"  />
+
+ <button (click)="myFunc()" formtarget="_blank">inscrit</button>-->

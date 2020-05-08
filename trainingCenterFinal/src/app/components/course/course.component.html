@@ -1,0 +1,31 @@
+
+<span   *ngIf = 'sessionValuee != null; else role' > Bonjour {{ sessionValuee}} </span>
+<ng-template #role > <span>session est vide</span> </ng-template>
+<div class="container mt-5">
+    <h1 class="text-center mb-5">  Formation et Détails </h1>
+    <div class="row justify-content-center">
+     
+      <div class="col-md-6" >
+   
+
+     <table class="table table-borderless">
+
+  <tbody>
+    
+      <tr *ngFor="let course of courses; let indx =  index">
+        <td>{{indx+1}}</td>
+        
+       <td> {{course.title}} </td>
+       <td> <button class="btn btn-outline-info btn-sm" [routerLink]= "['/courseDetail', course._id] " > Détails </button> </td>
+       
+        <td *ngIf = 'sessionRole != null' ><button class="btn btn-outline-success btn-sm" [routerLink] = "['/editCourse', course._id]" >edit</button></td>
+        <td *ngIf = 'sessionRole != null'  > <button class="btn btn-outline-danger btn-sm" (click)="courseService.deleteById(course._id)"  >delete</button>  </td> 
+    </tr>
+   
+  </tbody>
+</table>
+     </div>
+
+        </div>
+        </div>
+

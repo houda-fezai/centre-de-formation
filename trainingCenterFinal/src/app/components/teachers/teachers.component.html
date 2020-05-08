@@ -1,0 +1,73 @@
+<div class="container">
+
+  
+  
+
+    <img class="rounded-circle " src="{{imgTr}} " width="50" height="50">
+     
+    <span class="ml-3"> Bonjour {{teacher.name}} <strong></strong>  </span>
+
+<div class="row mt-5" >
+
+
+
+ <div class=" col-md-4 mb-5 " style="border: 1px solid beige ;">
+  <h5 class="m-4" style="color: teal;">information personnelle:</h5>
+
+
+  <p><span style="color: teal;">Nom: </span> {{teacher.name}}  </p>
+  <p><span style="color: teal;">Prénom:</span> {{teacher.lastname}} </p>
+  <p><span style="color: teal;">Specialité:</span> {{teacher.speciality}} </p> 
+
+  <button type="button" class="btn btn-info btn-sm mt-5 mb-5" (click)="toggleShow()" ><span >mettre à jour mes information personnelle</span></button>
+  <div *ngIf="show">
+    <form  class="toggle-panel mb-5">
+      <div class="form-group">
+            
+             <input type="text" class="form-control" id="nom"  name="name"  [(ngModel)]="teacher.name"  ngModel>
+         </div>
+         <div class="form-group">
+            
+             <input type="text" class="form-control" id="nom"  name="lastname" [(ngModel)]= "teacher.lastname" ngModel>
+         </div>
+        <div class="form-group">
+            
+             <input type="text" class="form-control" id="nom"  name="speciality" [(ngModel)]= "teacher.speciality" ngModel>
+         </div>
+         <div class="form-group">
+           
+             <input type="hidden" class="form-control" id="email" name="email" ngModel>
+         </div>
+         <div class="form-group">
+             
+             <input type="hidden" class="form-control" id="password" name="password" ngModel>
+         </div>
+       
+        
+         <button type="submit" class="btn btn-primary">Valider</button>
+  
+ 
+ </form>
+<p class="mb-3 mt-5" style="color: teal;">mettre à jour ma photo</p>
+  <input type="file" id="myFile" size="50" name="TeacherImage" (change)="onFileSelected($event)" ><br>
+     <button type="submit" class="btn btn-primary" (click)="onSubmit()" >changer</button>
+
+  </div>   
+
+ </div>
+ <div class="offset-1 col-md-6 justify-content-center" >
+  <h3 class="mb-5"> Projets du formation :</h3>
+  <p>1. projet </p>
+  <p>2. projet</p>
+
+ </div>    
+
+      
+
+</div>
+
+
+
+
+             
+</div>
