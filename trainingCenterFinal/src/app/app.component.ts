@@ -19,7 +19,7 @@ export class AppComponent  {
   sessionTrId:string;
   //message:string;
   //messagess:Array<any> = [];
-  constructor(private userService: UserService){}
+  constructor(private userService: UserService, private studentService: StudentService, private teacherService: TeacherService){}
 
  ngOnInit(){
    this.sessionRole = sessionStorage.getItem('userRole');

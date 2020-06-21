@@ -22,7 +22,7 @@ import { AuthTrGuard } from './guard/auth-tr.guard';
 
 
 const routes: Routes = [
-{ path: "home", redirectTo: "home", pathMatch:"full" },
+{ path: "", redirectTo: "home", pathMatch:"full" },
 {path: "home", component: HomeComponent},
 {path: "users", component: UsersComponent},
 {path: "student/:id", component: StudentsComponent, canActivate:[AuthStGuard]},

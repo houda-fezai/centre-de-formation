@@ -37,6 +37,17 @@
               <a class="nav-link" (click)="userService.logout()">logout</a>
             </li>
             </span>
+
+            <span *ngIf = 'sessionStudent != null' >
+             <li class="nav-item">
+              <a class="nav-link" (click)="studentService.logoutS()">logout</a>
+            </li>
+            </span>
+            <span *ngIf = 'sessionTeacher != null' >
+             <li class="nav-item">
+              <a class="nav-link" (click)="teacherService.logout()">logout</a>
+            </li>
+            </span>
           </ul>
          
         </div>

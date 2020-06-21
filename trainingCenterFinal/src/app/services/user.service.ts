@@ -38,7 +38,7 @@ export class UserService {
       clearTimeout(this.tokenTimer);
       console.log('router:' + this.router);
       this.isAuth = false;
-      this.router.navigate(['/loginUser']);
+      this.router.navigate(['/loginUser']) ;
 
     }
    

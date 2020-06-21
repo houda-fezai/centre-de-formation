@@ -28,18 +28,18 @@ export class StudentService {
  setTimer(expiresIn){
   
    this.tokenTimer = setTimeout(()=>{
-     this.logout();
+     this.logoutS();
    }, expiresIn * 1000
    )
  }
 
- logout(){
+ logoutS(){
 
   localStorage.removeItem('token');
   sessionStorage.clear()
   clearTimeout(this.tokenTimer);
   this.isAuth = false;
-  this.router.navigate(['/loginSt']);
+  this.router.navigate(['/loginS']);
 
  }
  loggedIn(){
